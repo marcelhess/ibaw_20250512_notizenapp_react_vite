@@ -2,6 +2,11 @@
 
 Eine voll funktionsfähige MERN-Stack Notizen-App mit Authentifizierung, Filter-/Sortierfunktionen und Deployment auf Vercel.
 
+## 🚀 Live-Demo
+
+Die Anwendung ist online erreichbar unter:  
+[https://ibaw-20250512-notizenapp-react-vite-frontend.vercel.app](https://ibaw-20250512-notizenapp-react-vite-frontend.vercel.app)
+
 ## Monorepo-Struktur
 
 - /backend: Node.js/Express API
