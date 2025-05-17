@@ -7,6 +7,8 @@ Eine voll funktionsfähige MERN-Stack Notizen-App mit Authentifizierung, Filter-
 Die Anwendung ist online erreichbar unter:  
 [https://ibaw-20250512-notizenapp-react-vite-frontend.vercel.app](https://ibaw-20250512-notizenapp-react-vite-frontend.vercel.app)
 
+> Tipp: Mit STRG+Klick (Windows) oder CMD+Klick (Mac) öffnet sich der Link im neuen Tab.
+
 ## Monorepo-Struktur
 
 - /backend: Node.js/Express API
