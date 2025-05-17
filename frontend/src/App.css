@@ -1,0 +1,267 @@
+/* Globales Styling für die Notes App */ 
+body {
+  margin: 0;
+  font-family: 'Inter', 'Open Sans', 'Roboto', Arial, sans-serif;
+  background: #f7f8fa;
+  color: #222;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  margin-top: 0;
+  letter-spacing: 0.01em;
+}
+
+input, select, button {
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus, button:focus {
+  outline: 2px solid #3498db;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px #3498db33;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 1px 2px #0001;
+}
+
+button:active {
+  opacity: 0.95;
+  transform: scale(0.98);
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Grid für NotesList */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  margin-top: 16px;
+}
+
+@media (min-width: 600px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .notes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .notes-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Kachel-Styling */
+.note-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #e0e0e0;
+  padding: 24px 20px 20px 20px;
+  transition: box-shadow 0.2s, transform 0.1s;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.note-card:hover {
+  box-shadow: 0 6px 32px #d0d0d0;
+  transform: translateY(-2px) scale(1.01);
+}
+
+.note-card h4 {
+  margin-bottom: 2px;
+  font-size: 1.15rem;
+}
+
+.note-card > div {
+  margin-bottom: 6px;
+}
+
+.note-card .note-actions,
+.note-card .button-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.note-card button {
+  flex: 1 1 40%;
+  min-width: 90px;
+  margin: 0;
+}
+
+.note-card button:not(:last-child) {
+  margin-right: 0;
+}
+
+.note-card button {
+  box-shadow: 0 1px 2px #0001;
+}
+
+.note-card button[style*='background: #2ecc40'] {
+  background: #27ae60 !important;
+}
+
+.note-card button[style*='background: #e74c3c'] {
+  background: #e74c3c !important;
+}
+
+.note-card button[style*='background: #27ae60'] {
+  background: #27ae60 !important;
+}
+
+.note-card button[style*='background: #aaa'] {
+  background: #aaa !important;
+}
+
+/* Alerts */
+.alert {
+  font-size: 1rem;
+  border-radius: 8px;
+  margin: 12px 0;
+  padding: 14px 22px;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Farben */
+:root {
+  --primary: #3498db;
+  --accent: #27ae60;
+  --danger: #e74c3c;
+  --bg: #f7f8fa;
+  --text: #222;
+}
+
+/* Mobile Optimierung */
+@media (max-width: 600px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .note-card {
+    padding: 16px 8px 14px 8px;
+  }
+  .note-card button {
+    min-width: 70px;
+    font-size: 0.95rem;
+    padding: 8px 4px;
+  }
+}
+
+.main-content {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+@media (max-width: 600px) {
+  .main-content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* Custom Button Colors */
+.button-done {
+  background: #D3D3D3 !important;
+  color: #222 !important;
+}
+.button-edit {
+  background: #9FE2BF !important;
+  color: #222 !important;
+}
+.button-danger {
+  background: #DC143C !important;
+  color: #fff !important;
+}
+.button-add {
+  background: #4682B4 !important;
+  color: #fff !important;
+}
+.button-home {
+  background: #fff !important;
+  color: var(--primary) !important;
+  border: 1.5px solid #e0e0e0 !important;
+}
+.button-home svg {
+  color: var(--primary) !important;
+}
+.button-login {
+  background: #9FE2BF !important;
+  color: #222 !important;
+}
+.button-register {
+  background: #008080 !important;
+  color: #fff !important;
+}
+.button-register svg {
+  color: #fff !important;
+}
+.button-dashboard {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+.button-dashboard svg {
+  color: #fff !important;
+}
+
+@media (max-width: 900px) {
+  .note-card .note-actions,
+  .note-card .button-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .note-card button {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+.button-icon {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 1px 2px #0001;
+  cursor: pointer;
+}
+.button-icon:hover, .button-icon:focus {
+  filter: brightness(0.97);
+}
+.button-icon.button-danger {
+  background: #DC143C !important;
+  color: #fff !important;
+}
+.button-icon.button-danger:hover, .button-icon.button-danger:focus {
+  background: #b0102c !important;
+}
+.button-icon:focus {
+  outline: 2px solid var(--primary);
+  box-shadow: 0 0 0 2px #3498db33;
+} 
