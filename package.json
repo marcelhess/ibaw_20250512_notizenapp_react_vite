@@ -1,0 +1,12 @@
+{
+  "name": "notes-mern-monorepo",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "start": "echo 'Bitte in backend oder frontend wechseln'",
+    "dev": "echo 'Bitte in backend oder frontend wechseln'"
+  }
+} 
